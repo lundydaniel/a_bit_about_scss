@@ -1,0 +1,14 @@
+{
+  "name": "learnscss",
+  "version": "1.0.0",
+  "description": "Basics of Scss",
+  "main": "index.js",
+  "scripts": {
+    "dev": "lite-server"
+  },
+  "author": "Daniel Lundy",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}

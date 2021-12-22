@@ -1,0 +1,43 @@
+//** With Sass you can create variables. To create a variable us simply use the $ sign much like php. This _config file is used as a sort of global variable call out. We simply import this file into the scss file we want to use it in and when calling our variables they will be applied. This is especially useful on large sites that need a quick change. I could change the color of the primary-color variable and everything on the site using that variable will apply the changes. Instead of changing each individual element manually. 
+
+$light-color: #f5f5f5;
+$font-stack: Arial, Helvetica, sans-serif;
+// $primary-color: #457dd1;
+$primary-color: #a6d1e2;
+$secondary-color: rgb(230, 172, 65);
+
+//** Another powerful thing you can do with SCSS/SASS is create functions. Let's set our text color based on our bg color.
+
+@function set-text-color($color){
+    @if(lightness($color) > 70) {
+        @return #333;
+    } @else {
+        @return #fff;
+    }
+}   
+
+//** We can also use what is called a mixin. It is like a function but doesn't return anything. Let's try it out. This will set the background color to whatever color we choose, and also takes in the set-text-color function and applies it. 
+
+@mixin set-background($color) {
+    background-color: $color;
+    color: set-text-color($color);
+}
+
+//** Here is a demonstration of each loops in SCSS! Let's set up some margin and padding classes for our paragraph.
+
+$spaceAmounts: (1,2,3,4,5);
+
+@each $space in $spaceAmounts {
+    .m-#{$space} {
+        margin: #{$space}rem;
+    }
+    .my-#{$space} {
+        margin: #{$space}rem 0;
+    }
+    .p-#{$space} {
+        padding: #{$space}rem;
+    }
+    .py-#{$space} {
+        padding: #{$space}rem 0;
+    }
+}

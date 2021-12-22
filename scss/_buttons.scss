@@ -1,0 +1,25 @@
+//*** Creating shared styles for the buttons.
+
+%btn {
+    display: inline-block;
+    border-radius: 15px;
+    padding: 8px 20px;
+    margin: 4px;
+
+    &:hover {
+        transform: scale(.98);
+    }
+}
+
+//** Now we can create styles for each button as we see fit. We can extend the btn values we created to our buttons.
+
+.btn-primary {
+    @extend %btn;
+    background-color: darken($primary-color, 10%);
+}
+
+.btn-secondary {
+    @extend %btn;
+    background-color: $secondary-color;
+}
+
