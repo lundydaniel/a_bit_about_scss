@@ -1,4 +1,7 @@
-//** With Sass you can create variables. To create a variable us simply use the $ sign much like php. This _config file is used as a sort of global variable call out. We simply import this file into the scss file we want to use it in and when calling our variables they will be applied. This is especially useful on large sites that need a quick change. I could change the color of the primary-color variable and everything on the site using that variable will apply the changes. Instead of changing each individual element manually. 
+//** With Sass you can create variables. To create a variable simply use the $ sign much like php. This _config file is used as a sort of global variable call out. 
+We simply import this file into the scss file we want to use it in and when calling our variables they will be applied. This is especially useful on large sites that 
+need a quick change. I could change the color of the primary-color variable and everything on the site using that variable will apply the changes. Instead of changing
+each individual element manually. 
 
 $light-color: #f5f5f5;
 $font-stack: Arial, Helvetica, sans-serif;
@@ -16,7 +19,8 @@ $secondary-color: rgb(230, 172, 65);
     }
 }   
 
-//** We can also use what is called a mixin. It is like a function but doesn't return anything. Let's try it out. This will set the background color to whatever color we choose, and also takes in the set-text-color function and applies it. 
+//** We can also use what is called a mixin. It is like a function but doesn't return anything. Let's try it out. This will set the background color to whatever color
+we choose, and also takes in the set-text-color function and applies it. 
 
 @mixin set-background($color) {
     background-color: $color;
